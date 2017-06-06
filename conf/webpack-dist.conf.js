@@ -9,8 +9,7 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   module: {
-    loaders: [
-      {
+    loaders: [{
         test: /\.json$/,
         loaders: [
           'json-loader'
@@ -21,6 +20,11 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'tslint-loader',
         enforce: 'pre'
+      },
+
+      {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        loader: 'url-loader?limit=100000'
       },
       {
         test: /\.(css|scss)$/,
@@ -59,11 +63,19 @@ module.exports = {
       'process.env.NODE_ENV': '"production"'
     }),
     new webpack.optimize.UglifyJsPlugin({
-      output: {comments: false},
-      compress: {unused: true, dead_code: true, warnings: false} // eslint-disable-line camelcase
+      output: {
+        comments: false
+      },
+      compress: {
+        unused: true,
+        dead_code: true,
+        warnings: false
+      } // eslint-disable-line camelcase
     }),
     new ExtractTextPlugin('index-[contenthash].css'),
-    new webpack.optimize.CommonsChunkPlugin({name: 'vendor'}),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor'
+    }),
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss: () => [autoprefixer],
