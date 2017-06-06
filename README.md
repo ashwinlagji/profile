@@ -1,2 +1,2 @@
-# profile
-A static page demo for my personal portfolio.
+# PROFILE
+A static page demo for portfolio.
