@@ -1,0 +1,94 @@
+/* Main Styles*/
+@import "font-awesome.min.css";
+
+body {
+  background: #09f;
+  /* */
+  /* @include background-image(linear-gradient(bottom, #09f, #45d1ff));*/
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwOTlmZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzQ1ZDFmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #0099ff), color-stop(100%, #45d1ff));
+  background-image: -webkit-linear-gradient(bottom, #0099ff, #45d1ff);
+  background-image: -webkit-linear-gradient(bottom, #0055ff, #45d1ff);
+  background-image: linear-gradient(to top, #0055ff, #45d1ff);
+  font: normal 14px/1.618em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.profile-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-width: 200px;
+  max-width: 300px;
+  min-height: 352px;
+  text-align: center;
+  background: #FFFFFF;
+  padding: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+  .image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px solid #F0F0F0;
+    margin: 30px 0;
+  }
+
+  .title {
+    padding: 0 0 10px;
+
+    label {
+      display: block;
+    }
+  }
+
+  .profile-name{
+      font-size: 20px;
+      color: #1a21ef;
+  }
+  .social-links {
+    width: 100%;
+    padding: 30px 0 0;
+
+    ul {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      list-style: none;
+    }
+
+    .fa {
+      color: #1a21ef;
+      cursor: pointer;
+    }
+  }
+}
